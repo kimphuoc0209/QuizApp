@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { createAPIEndpoint, ENDPOINTS, BASE_URL } from "../api";
 import useStateContext from "../hooks/useStateContext";

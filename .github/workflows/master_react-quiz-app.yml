@@ -59,4 +59,4 @@ jobs:
           app-name: 'react-quiz-app'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FB84C570B70F4B448D4BDF1CBA21DCE8 }}
-          package: .
+          package: release.zip

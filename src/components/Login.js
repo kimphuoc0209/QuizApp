@@ -14,12 +14,11 @@ const getFreshModel = () => ({
 
 export default function Login() {
 
-    const { context, setContext, resetContext } = useStateContext();
+    const {setContext, resetContext } = useStateContext();
     const navigate = useNavigate()
 
     const {
         values,
-        setValues,
         errors,
         setErrors,
         handleInputChange
@@ -27,7 +26,7 @@ export default function Login() {
 
     useEffect(() => {
         resetContext()
-    }, [])
+    })
 
 
     const login = e => {
@@ -45,9 +44,9 @@ export default function Login() {
     const validate = () => {
         let temp = {}
         temp.email = (/\S+@\S+\.\S+/).test(values.email) ? "" : "Email is not valid."
-        temp.name = values.name != "" ? "" : "This field is required."
+        temp.name = values.name !== "" ? "" : "This field is required."
         setErrors(temp)
-        return Object.values(temp).every(x => x == "")
+        return Object.values(temp).every(x => x === "")
     }
 
     return (

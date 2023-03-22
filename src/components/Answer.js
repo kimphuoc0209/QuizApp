@@ -1,5 +1,5 @@
-import React,{useState} from 'react'
-import { Accordion, AccordionDetails, AccordionSummary, CardMedia, Chip, List, ListItem, Typography } from '@mui/material';
+import React from 'react'
+import { Accordion, AccordionDetails, AccordionSummary, CardMedia, List, ListItem, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import { BASE_URL } from '../api';
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
@@ -15,7 +15,7 @@ export default function Answer({qnAnswers}) {
 
     const markCorrectOrNot = (qna, idx) => {
         if ([qna.answer, qna.selected].includes(idx)) {
-            return { sx: { color: qna.answer == idx ? green[500] : red[500] } }
+            return { sx: { color: qna.answer === idx ? green[500] : red[500] } }
         }
     } 
     
@@ -29,7 +29,7 @@ export default function Answer({qnAnswers}) {
                     onChange={handleChange(j)}>
                     <AccordionSummary expandIcon={<ExpandCircleDownIcon
                         sx={{
-                            color: item.answer == item.selected ? green[500] : red[500]
+                            color: item.answer === item.selected ? green[500] : red[500]
                         }}
                     />}>
                         <Typography

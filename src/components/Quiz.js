@@ -35,7 +35,7 @@ export default function Quiz() {
             .catch(err => { console.log(err); })
 
         return () => { clearInterval(timer) }
-    }, [])
+    })
 
     const updateAnswer = (qnId, optionIdx) => {
         const temp = [...context.selectedOptions]

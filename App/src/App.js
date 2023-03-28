@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Authenticate from './components/Authenticate';
-import Layout from './components/Layout';
-import Login from './components/Login';
-import Quiz from './components/Quiz';
-import Result from './components/Result';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Authenticate from "./components/Authenticate";
+import Layout from "./components/Layout";
+import Login from "./components/Login";
+import Quiz from "./components/Quiz";
+import Result from "./components/Result";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           </Route>
         </Route>
       </Routes>
-    </BrowserRouter >
+    </BrowserRouter>
   );
 }
 
